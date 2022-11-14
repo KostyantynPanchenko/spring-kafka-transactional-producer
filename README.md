@@ -10,14 +10,9 @@ For further reference, please consider the following sections:
 * [Spring for Apache Kafka](https://docs.spring.io/spring-boot/docs/2.7.5/reference/htmlsingle/#messaging.kafka)
 
 ### Guides
-The following guides illustrate how to use some features concretely:
-
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
-
-### Additional Links
-These additional references should also help you:
-
-* [Gradle Build Scans – insights for your project's build](https://scans.gradle.com#gradle)
-
+* Start up Kafka infrastructure `docker compose -f docker-compose.yml up -d`
+* Start this application in your favourite IDE (or build and run as a regular jar file)
+* Issue GET request to `http://localhost:8082/kafka-producer/send` and verify messages are sent to both topics
+* Issue GET request to `http://localhost:8082/kafka-producer/stop` to stop Kafka listener container, observe logs
+* Shut down the application
+* Shut down Kafka infrastructure `docker compose down`
